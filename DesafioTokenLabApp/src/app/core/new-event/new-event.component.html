@@ -1,0 +1,31 @@
+<section class="new-event-container">
+  <h1>Novo Evento</h1>
+  <form [formGroup]="newEventForm" class="new-event-form">
+    <input type="hidden" formControlName="id">
+    <mat-form-field>
+      <mat-label>Nome do Evento</mat-label>
+      <input matInput type="text" formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Descrição do Evento</mat-label>
+      <input matInput type="text" formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Hora de início</mat-label>
+      <input matInput type="time" formControlName="start">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Hora de fim</mat-label>
+      <input matInput type="time" formControlName="end">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Data do Evento</mat-label>
+      <input matInput type="date" formControlName="date">
+    </mat-form-field>
+  </form>
+
+  <div class="new-event-button-container">
+    <button *ngIf="!isEdit" (click)="createNewEvent()" class="new-event-button" mat-button [disabled]="!newEventForm.valid">Cadastrar</button>
+    <button *ngIf="isEdit" (click)="editEvent()" class="new-event-button" mat-button [disabled]="!newEventForm.valid">Salvar</button>
+  </div>
+</section>

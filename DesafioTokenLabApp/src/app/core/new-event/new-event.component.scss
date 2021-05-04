@@ -1,0 +1,33 @@
+.new-event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  .new-event-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    padding: 20px;
+
+    mat-form-field {
+      width: 45%;
+      margin: 0 2px;
+    }
+  }
+
+  .new-event-button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    margin-top: 20px;
+    .new-event-button {
+      border: 1px solid #ccc;
+      background-color: #F6F6F6;
+    }
+  }
+}

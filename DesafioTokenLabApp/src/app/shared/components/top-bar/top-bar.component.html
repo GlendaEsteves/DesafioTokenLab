@@ -1,0 +1,4 @@
+<section class="top-bar-container">
+  <h1 (click)="goToEvents()">Eventos</h1>
+  <button *ngIf="currentRoute !== '/login'" (click)="gotToNewEvent()" mat-button class="new-event-button">Novo Evento</button>
+</section>

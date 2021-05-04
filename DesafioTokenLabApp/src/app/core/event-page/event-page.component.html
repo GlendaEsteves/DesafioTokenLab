@@ -1,0 +1,22 @@
+<section class="event-page-container">
+  <table>
+    <tr class="title-row">
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Hora</th>
+      <th>Data</th>
+      <th></th>
+    </tr>
+
+    <tr *ngFor="let event of eventList; let index = index">
+      <td class="event-name">{{event?.name}}</td>
+      <td>{{event?.description}}</td>
+      <td>{{event?.start}} até às {{event?.end}}</td>
+      <td>{{event?.date | date: 'dd/MM/yyyy':'UTC+3'}}</td>
+      <td>
+        <mat-icon (click)="editEvent(index)">edit</mat-icon>
+        <mat-icon (click)="deleteEvent(index)">delete</mat-icon>
+      </td>
+    </tr>
+  </table>
+</section>

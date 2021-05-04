@@ -1,0 +1,28 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  width: 100%;
+  .form-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    width: 120px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+    border: 1px solid #ccc;
+  }
+}
